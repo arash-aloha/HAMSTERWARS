@@ -8,6 +8,7 @@ const PORT = 1337;
 
 //Middleware
 app.use( cors() );
+app.use( express.json() )
 app.use( (req, res, next) => {
     requestCount++
     console.log(`${requestCount}, Method: ${req.method}, Request URL: ${req.url}`, req.body)
