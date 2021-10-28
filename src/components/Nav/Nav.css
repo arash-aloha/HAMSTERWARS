@@ -1,0 +1,45 @@
+nav {
+    background: #eee;
+    width: 100%;
+    max-width: 1100px;
+}
+.navbar-container {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    padding: .2em;
+}
+.navbar-items {
+    text-align: center;
+    margin-left: auto;
+}
+.navbar-items a {
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+}
+.logo img {
+    width: 3em;
+}
+.mobile-icon {
+    display: none;
+}
+@media screen and (max-width: 768px){
+    .navbar-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .navbar-items {
+        display: none;
+    }
+    .mobile-icon {
+        display: inline-block;
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+    .logo img {
+        width: 1.7em;
+    }
+}
