@@ -8,7 +8,6 @@ import Gallery from './pages/Gallery/Gallery';
 import About from './pages/about/About';
 
 
-
 function App() {
   return (
     

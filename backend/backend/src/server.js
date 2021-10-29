@@ -32,7 +32,7 @@ app.get('*', (req, res) => {
     console.log('* is being called...')
     res.send(__dirname + '/build/index.html');
 });
-app.get('/hamsters', (req,res) => {
-    console.log('Server received GET /hamsters');
-    res.send('GET "/HAMSTERS"')
-});
+// app.get('/hamsters', (req,res) => {
+//     console.log('Server received GET /hamsters');
+//     res.send('GET "/HAMSTERS"')
+// });

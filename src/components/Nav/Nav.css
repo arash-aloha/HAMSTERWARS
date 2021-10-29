@@ -10,6 +10,7 @@ nav {
     padding: .2em;
 }
 .navbar-items {
+    display: flex;
     text-align: center;
     margin-left: auto;
 }
@@ -29,6 +30,9 @@ nav {
     border-bottom: 3px solid var(--nav-font-color);
     padding-bottom: .5em;
     font-weight: bold;
+}
+.icons {
+    font-size: 2em;
 }
 .logo img {
     width: 3em;

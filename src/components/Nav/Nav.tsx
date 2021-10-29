@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { TiThMenuOutline } from 'react-icons/ti'
-import { GiShiningSword } from 'react-icons/gi'
+import { GiShiningSword, GiSwordsEmblem } from 'react-icons/gi'
+import { ImHome } from 'react-icons/im'
+import { AiFillCompass } from 'react-icons/ai'
 import './Nav.css'
 import logo from './logo.png'
 import { useState } from "react";
@@ -37,10 +39,20 @@ const Nav = () => {
                     </li>
                 </aside>
                 <li className="navbar-items">
-                    <Link to="/home"> home </Link>
-                    <Link to="/gallery"> hamsters </Link>
-                    <Link to="/cutest"> play <span><GiShiningSword /></span></Link>
-                    <Link to="/about"> about </Link>
+                    <Link to="/home"> 
+                        <span><ImHome className="icons" /></span>
+                        <br /> home </Link>
+
+                    <Link to="/gallery"> 
+                        <span><GiSwordsEmblem className="icons" /></span>
+                        <br /> hamsters </Link>
+
+                    <Link to="/cutest">
+                        <span><GiShiningSword className="icons" /></span>
+                        <br /> play </Link>
+                    <Link to="/about"> 
+                    <span><AiFillCompass className="icons" /></span>
+                    <br /> about </Link>
                 </li>
             </div>
         </nav>
