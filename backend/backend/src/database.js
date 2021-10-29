@@ -7,7 +7,7 @@ let privateKey;
 if( process.env.PRIVATE_KEY ) {
     privateKey = JSON.parse(process.env.PRIVATE_KEY)
 } else {
-    privateKey = require('../backend/backend/src/secrets/firebase-key.json')
+    privateKey = require('/backend/backend/src/secrets/firebase-key.json')
 }
 
 
