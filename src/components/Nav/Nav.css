@@ -51,6 +51,7 @@ nav {
         font-size: 1.8rem;
         cursor: pointer;
         color: var(--nav-font-color);
+        margin-left: auto;
     }
     .logo img {
         display: flex;
@@ -68,4 +69,7 @@ nav {
     top: 0;
     left: 0;
     transition: .3s ease-in-out;
+}
+.sidebar-container.active {
+    display: none;
 }

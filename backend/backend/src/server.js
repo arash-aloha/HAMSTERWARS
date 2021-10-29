@@ -17,17 +17,17 @@ app.use( (req, res, next) => {
     console.log(`${requestCount}, Method: ${req.method}, Request URL: ${req.url}`, req.body)
     next();
 })
-app.use( '/public', express.static(__dirname + '/../public') )
+app.use( '/public', express.static(__dirname + '/../../../public') )
 app.use( '/img', express.static(__dirname + '/../hamsters') )
 //Endpoints
 app.use('/hamsters', hamstersRouter);
 
 //Start server
 app.listen(PORT, () => {
-    console.log(`Server is listening to ${PORT}...`);
+    console.log(`Server is online, listening to port: ${PORT}...`);
 })
 
-app.use( express.static(__dirname + '/../build') )
+app.use( express.static(__dirname + '../../../build') )
 app.get('*', (req, res) => {
     console.log('* is being called...')
     res.send(__dirname + '/build/index.html');

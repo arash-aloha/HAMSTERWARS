@@ -2,6 +2,9 @@
 const Gallery = () => {
 
     return (
+
+        
+
         <main>
             Gallery image page
         </main>

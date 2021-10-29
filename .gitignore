@@ -1,6 +1,9 @@
 node_modules/
 .DS_Store
 .env
-secret.json
-secrets/
-firebase-key.json
+backend/backend/.DS_Store
+backend/backend/.env
+backend/backend/src/secrets/secret.json
+backend/backend/src/secrets/
+backend/backend/src/secrets/firebase-key.json
+
