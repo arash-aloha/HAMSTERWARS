@@ -16,6 +16,14 @@ const Nav = () => {
                     />
                 </Link>
                 <div className="mobile-icon"><TiThMenuOutline className="faBars"/></div>
+                <aside className="sidebar-container">
+                <li className="navbar-items">
+                    <Link to="/home"> home </Link>
+                    <Link to="/gallery"> gallery </Link>
+                    <Link to="/cutest"> cutest </Link>
+                    <Link to="/about"> about </Link>
+                </li>
+                </aside>
                 <li className="navbar-items">
                     <Link to="/home"> home </Link>
                     <Link to="/gallery"> gallery </Link>
