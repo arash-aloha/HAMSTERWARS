@@ -1,16 +1,16 @@
 export interface HamsterObject {
-    "name": string;
-    "age": number;
-    "favFood": string;
-    "loves": string;
-    "imgName": string;
-    "wins": number;
-    "defeats": number;
-    "games": number;
+    name: string;
+    age: number;
+    favFood: string;
+    loves: string;
+    imgName: string;
+    wins: number;
+    defeats: number;
+    games: number;
 }
 
 export interface Match {
-    "wins": number;
-    "defeats": number;
-    "games": number;
+    wins: number;
+    defeats: number;
+    games: number;
 }

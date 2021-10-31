@@ -3,7 +3,7 @@ node_modules/
 .env
 backend/backend/.DS_Store
 backend/backend/.env
-backend/backend/src/secrets/secret.json
-backend/backend/src/secrets/
-backend/backend/src/secrets/firebase-key.json
+backend/backend/src/secrets2/secret.json
+backend/backend/src/secrets2/
+backend/backend/src/secrets2/firebase-key.json
 
