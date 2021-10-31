@@ -1,6 +1,6 @@
 
 const About = () => (
-    <section>
+    <section className="container">
         <article> about section - hamster wars fullstack dynamic web-app </article>
     </section>
 )

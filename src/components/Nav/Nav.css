@@ -1,5 +1,5 @@
 nav {
-    background: #eee;
+    background: #fff;
     width: 100%;
 }
 .navbar-container {
@@ -8,6 +8,7 @@ nav {
     list-style: none;
     width: 100%;
     padding: .2em;
+    border-bottom-style: inset;
 }
 .navbar-items {
     display: flex;
@@ -18,16 +19,18 @@ nav {
     list-style: none;
     text-decoration: none;
     text-align: center;
-    margin-left: 2em;
-    margin-right: 1em;
+    margin-left: 1em;
+    margin-right: .5em;
+    padding: .8em;
+    transition: all 30ms;
 }
 .navbar-items a:hover, a:visited {
-    color: var(--nav-font-color);
-    border-bottom: 3px solid var(--nav-font-color);
+    color: var(--font-color);
+    border-bottom: 3px solid var(--font-color);
     padding-bottom: .5em;
 }
 .navbar-items a:active {
-    border-bottom: 3px solid var(--nav-font-color);
+    border-bottom: 3px solid var(--font-color);
     padding-bottom: .5em;
     font-weight: bold;
 }
@@ -36,6 +39,23 @@ nav {
 }
 .logo img {
     width: 3em;
+    margin-left: .5em;
+    transition: all 500ms;
+}
+.logo img:hover {
+    border-bottom: 5px solid var(--font-color);
+    transform: rotate(1080deg);
+    padding: .5em;
+}
+.navbar-container a {
+    text-decoration-line: none;
+}
+.navbar-container h1 {
+    margin-left: 1em;
+    font-weight: lighter;
+    color: var(--font-color);
+    border-style: double;
+    padding: .5em;
 }
 .mobile-icon {
     display: none;
@@ -54,7 +74,7 @@ nav {
         display: flex;
         font-size: 1.8rem;
         cursor: pointer;
-        color: var(--nav-font-color);
+        color: var(--font-color);
         margin-left: auto;
     }
     .logo img {

@@ -26,6 +26,7 @@ const Nav = () => {
                     <img src={logo} alt="Logo" 
                     />
                 </Link>
+                <Link to="/"> <h1 > HAMSTER WAR </h1> </Link>
                 <div className="mobile-icon" onClick={toggleClass}>
                     <TiThMenuOutline className="faBars"/>
                 </div>
