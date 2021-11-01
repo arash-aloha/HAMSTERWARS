@@ -18,8 +18,8 @@ app.use( (req, res, next) => {
     console.log(`${requestCount}, Method: ${req.method}, Request URL: ${req.url}`, req.body)
     next();
 })
-// app.use( '/public', express.static(__dirname + '../../public') )
-app.use( '/img', express.static(path.resolve('backend/hamsters/') ))
+app.use( '/img', express.static(path.resolve('backend/hamsters/') ));
+
 //Endpoints
 app.use('/hamsters', hamstersRouter);
 
@@ -28,12 +28,8 @@ app.listen(PORT, () => {
     console.log(`Server is online, listening to port: ${PORT}...`);
 })
 
-app.use( express.static(path.resolve('build/') ))
+app.use( express.static(path.resolve('build/') ));
 app.get('*', (req, res) => {
     console.log('* is being called...')
     res.sendFile(path.resolve('build/index.html'));
 });
-// app.get('/hamsters', (req,res) => {
-//     console.log('Server received GET /hamsters');
-//     res.send('GET "/HAMSTERS"')
-// });

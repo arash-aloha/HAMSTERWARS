@@ -30,9 +30,11 @@ const Gallery = () => {
             {isLoading && (<p> Loading hamsters... </p>)}
             <section className="gallery grid-container">
                 {apiRequest?.map(object => (
-                    <figure className="hamster-card" key={object.id}>
-                        <img src={`/img/${object.imgName}`} alt={object.name} />
-                        <p>{object.name}</p>
+                    <figure className="hamster-card">
+                        <div className="hamster-img-container" key={object.id}> 
+                            <img src={`/img/${object.imgName}`} alt={object.name} />
+                            <p>{object.name.toUpperCase()}</p>
+                        </div> 
                     </figure>
                 ))}
             </section>

@@ -6,7 +6,7 @@ const LandingPage = () => {
     
     return (
         <>
-            <section className="container">
+            <section className="container landingpage-container">
                 <h2> May the <span className="cutest">cutest</span> hamster win </h2>
                 <h3> Let the games begin </h3>
                 <Link to="/home">

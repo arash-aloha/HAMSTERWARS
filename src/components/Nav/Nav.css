@@ -56,6 +56,9 @@ nav {
     color: var(--font-color);
     border-style: double;
     padding: .5em;
+    letter-spacing: .05em;
+    text-shadow: 1px 1px 1px rgb(29, 29, 29),
+                    2px 2px 1px rgb(29, 29, 29);
 }
 .mobile-icon {
     display: none;
