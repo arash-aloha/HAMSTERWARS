@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
+const path = require('path')
 const hamstersRouter = require('../src/routes/hamsters.js');
 
 //Configure server
@@ -30,7 +31,7 @@ app.listen(PORT, () => {
 app.use( express.static(__dirname + '../../build') )
 app.get('*', (req, res) => {
     console.log('* is being called...')
-    res.send(__dirname + '/build/index.html');
+    res.sendFile(path.resolve('build/index.html'));
 });
 // app.get('/hamsters', (req,res) => {
 //     console.log('Server received GET /hamsters');
