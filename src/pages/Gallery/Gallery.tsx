@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { HamsterObject } from "../../TS-models/models";
-
+import { sendRequest } from "../../components/async/async";
 import './Gallery.css'
 
 const Gallery = () => {
@@ -20,37 +20,24 @@ const Gallery = () => {
 
     useEffect(() => {
         sendRequest(setApiRequest, setIsLoading, setNoResponse)
-        console.log('Send API request.')
+        console.log('Sent API request.')
     }, [])
+
 
     return (
         <main className="container">
             {noResponse && (<p> Could not reach the server... Please try again later. </p>)}
             {isLoading && (<p> Loading hamsters... </p>)}
-            {apiRequest?.map(object => (
-                <figure>
-                    {console.log('inside')}
-                    <h1>{object.name}</h1>
-
-                </figure>
-            ))}
+            <section className="gallery grid-container">
+                {apiRequest?.map(object => (
+                    <figure className="hamster-card" key={object.id}>
+                        <img src={`/img/${object.imgName}`} alt={object.name} />
+                        <p>{object.name}</p>
+                    </figure>
+                ))}
+            </section>
         </main>
     )
-}
-
-async function sendRequest(saveData: any, loading:any, noResponse:any) {
-    try {
-        const response = await fetch('/hamsters');
-        const data = await response.json();
-        console.log(data)
-        loading(false)
-        saveData(data)
-    }
-    catch {
-        console.log("Error: ", Error);
-        loading(false)
-        noResponse(true)
-    }
 }
 
 export default Gallery;

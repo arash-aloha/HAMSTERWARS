@@ -1,0 +1,26 @@
+.gallery.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: .5em;
+    max-width: 100%;
+}   
+.hamster-card { 
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.hamster-card p {
+    position: absolute;
+    top: 0;
+    color: #eee;
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+.hamster-card img {
+    height: 20em;
+    width: 20em;
+    padding: .3px; 
+    border-radius: 3em;
+}
+
