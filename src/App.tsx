@@ -3,7 +3,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 
 import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home/Home";
-import Cutest from "./pages/Cutest/Cutest";
+import Cutest from "./pages/Tournaments/Tournaments";
 import Gallery from "./pages/Gallery/Gallery";
 import About from "./pages/about/About";
 import LandingPage from "./pages/LandingPage/LandingPage";

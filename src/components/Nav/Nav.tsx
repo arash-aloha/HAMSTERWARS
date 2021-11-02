@@ -34,15 +34,15 @@ const Nav = () => {
                 <aside className={!isActive ? 'sidebar-container active' : 'sidebar-container'}>
                     <li className="navbar-items">
                         <Link to="/home"> home </Link>
-                        <Link to="/gallery"> gallery </Link>
-                        <Link to="/cutest"> cutest </Link>
+                        <Link to="/gallery"> hamsters </Link>
+                        <Link to="/cutest"> tournaments </Link>
                         <Link to="/about"> about </Link>
                     </li>
                 </aside>
                 <li className="navbar-items">
                     <Link to="/home"> 
                         <span><ImHome className="icons" /></span>
-                        <br /> home </Link>
+                        <br /> <p>home</p> </Link>
 
                     <Link to="/gallery"> 
                         <span><GiSwordsEmblem className="icons" /></span>
@@ -50,7 +50,7 @@ const Nav = () => {
 
                     <Link to="/cutest">
                         <span><GiShiningSword className="icons" /></span>
-                        <br /> play </Link>
+                        <br /> tournament </Link>
                     <Link to="/about"> 
                     <span><AiFillCompass className="icons" /></span>
                     <br /> about </Link>

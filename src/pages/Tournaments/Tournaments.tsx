@@ -1,5 +1,5 @@
 
-const Cutest = () => {
+const Tournaments = () => {
 
 /*    
 Tävla
@@ -10,9 +10,9 @@ Tävla
 
     return (
         <main className="container">
-            Cutestpage Battle
+            Cutestpage Battle Tournaments
         </main>
     )
 }
 
-export default Cutest
+export default Tournaments

@@ -11,6 +11,8 @@
     width: 100%;
     max-height: 14em;
     transition: ease 700ms;
+    box-shadow: 2px 6px 2px lightgrey;
+    border-radius: 2em;
 }
 .hamster-img-container {
     position: relative;
