@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { RecoilRoot, RecoilState } from 'recoil';
+import { RecoilRoot } from 'recoil';
 import App from './App';
 
 

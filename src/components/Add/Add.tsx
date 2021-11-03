@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const Form = () => {
+const Add = () => {
     const [name, setName] = useState('');
     const [age, setAge] = useState(0)
 
@@ -37,4 +37,4 @@ const isValidAge = (age: number):boolean => {
     return true
 };
 
-export default Form;
+export default Add;

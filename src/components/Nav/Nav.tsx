@@ -6,6 +6,7 @@ import { AiFillCompass } from 'react-icons/ai'
 import './Nav.css'
 import logo from './logo.png'
 import { useState } from "react";
+import Search from "../Search/Search";
 
 
 const Nav = () => {
@@ -39,6 +40,7 @@ const Nav = () => {
                         <Link to="/about"> about </Link>
                     </li>
                 </aside>
+                {/* <Search /> */}
                 <li className="navbar-items">
                     <Link to="/home"> 
                         <span><ImHome className="icons" /></span>

@@ -8,10 +8,13 @@ export interface HamsterObject {
     defeats: number;
     games: number;
     id: number;
-}
-
+};
 export interface Match {
     wins: number;
     defeats: number;
     games: number;
+};
+export interface SearchProps {
+    search: string;
+    setSearch: (parameter:string)=>void;
 }

@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react"
 import { useRecoilState } from "recoil";
-import { HamsterObject } from "../../TS-models/models";
-import { sendRequest } from "../../components/async/async";
-import './Gallery.css'
 import { hamstersState } from "../../State/atoms";
 
+import { HamsterObject } from "../../TS-models/models";
+import { sendRequest } from "../../components/async/async";
+
+
+import './Gallery.css'
+import GalleryCard from "../../components/GalleryCard/GalleryCard";
 
 const Gallery = () => {
 /*
@@ -23,7 +26,10 @@ const Gallery = () => {
     
 
     useEffect(() => {
-        sendRequest(setApiRequest, setIsLoading, setNoResponse)
+        async function getFetch() {
+            await sendRequest(setApiRequest, setIsLoading, setNoResponse)
+        }
+        getFetch()
         console.log('Sent API request.')
     }, [])
 
@@ -33,16 +39,7 @@ const Gallery = () => {
             {noResponse && (<p> Could not reach the server... Please try again later. </p>)}
             {isLoading && (<p> Loading hamsters... </p>)}
 
-            <section className="gallery grid-container">
-                {apiRequest?.map(object => (
-                    <figure key={object.id} className="hamster-card">
-                        <div className="hamster-img-container" key={object.id}> 
-                            <img src={`/img/${object.imgName}`} alt={object.name} />
-                            <p>{object.name.toUpperCase()}</p>
-                        </div> 
-                    </figure>
-                ))}
-            </section>
+            { apiRequest && <GalleryCard /> }
         </main>
     )
 }

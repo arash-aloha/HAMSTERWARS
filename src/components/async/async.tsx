@@ -6,7 +6,7 @@ async function sendRequest(saveData:(data:any)=>void, loading:(parameter:boolean
             throw Error('Could not fetch data for that resource.');
         }
         const data = await response.json();
-        console.log(data);
+        console.log('Retrieved API response');
         saveData(data);
         loading(false);
     }
