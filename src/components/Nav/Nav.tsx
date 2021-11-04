@@ -6,7 +6,7 @@ import { AiFillCompass } from 'react-icons/ai'
 import './Nav.css'
 import logo from './logo.png'
 import { useState } from "react";
-import Search from "../Search/Search";
+
 
 
 const Nav = () => {

@@ -1,7 +1,7 @@
 .search-form {
     display: flex;
     justify-content: flex-end;
-    padding: 1em;
+    padding: 1em 1.3em 1em 1em;
     margin: 2em 0 2em 2.5em;
 }
 .search-form input {
@@ -19,6 +19,7 @@
     top: 0.5em;
     position: absolute;
     right: 1em;
+    cursor: pointer;
 }
 .search-result {
     font-weight: lighter;
