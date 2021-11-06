@@ -9,5 +9,9 @@ const matchState = atom<null | Match[]>({
     key: 'matchResults',
     default: []
 });
+const toggleState = atom<boolean>({
+    key: "toggle",
+    default: false
+});
 
-export { hamstersState, matchState }
+export { hamstersState, matchState, toggleState }

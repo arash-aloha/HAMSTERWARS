@@ -28,19 +28,19 @@
     object-fit: cover;
     object-position: center;
 }
-.hamster-card .hamster-img-container p {
+.hamster-card .hamster-img-container .name {
     position: absolute;
+    top: 1em;
     font-family: 'Quicksand', sans-serif;
     text-align: center;
     font-weight: 700;
-    bottom: 1em;
     color: #eee;
     font-size: 1.5em;
     text-shadow: 1px 1px 1px rgb(29, 29, 29),
                 1px 1px 1px rgb(29, 29, 29);
     letter-spacing: .1em;
 }
-.hamster-card .hamster-img-container p::before{
+.hamster-card .hamster-img-container .name::before{
     content: '';
     position: absolute;
     width: 2em;

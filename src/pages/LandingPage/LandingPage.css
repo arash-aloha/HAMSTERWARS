@@ -9,12 +9,11 @@
 }
 .img-container {
     box-shadow: rgba(185, 131, 31, 0.253) -5px 5px, rgba(206, 124, 17, 0.3) -10px 10px, rgba(196, 107, 6, 0.2) -15px 15px, rgba(226, 158, 81, 0.1) -20px 20px, rgba(212, 141, 8, 0.05) -25px 25px;
-    height: 15em;
-    width: 15em;
-    margin-left: 2em;
-    background: #969696;
     border-radius: .5em;
     border: 1px solid rgba(185, 131, 31, 0.253);
+}
+.img-container img {
+    width: 100%;
 }
 .container h2 {
     font-weight: 100;
