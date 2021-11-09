@@ -25,6 +25,7 @@
 .hamster-card .hamster-img-container img {
     height: 100%;
     width: 100%;
+    border-radius: 2em;
     object-fit: cover;
     object-position: center;
 }
@@ -50,6 +51,7 @@
     left: 50%;
     transform: translateX(-50%);
     animation: animate 4s linear infinite;
+    object-fit: contain;
 }
 .hamster-card:hover {
     cursor: pointer;
@@ -59,12 +61,12 @@
 }
 @keyframes animate {
     0%{
-        width: 2em;
+        width: 1em;
     }
     50%{
-        width: 8em;
+        width: 3em;
     }
     100%{
-        width: 2em;
+        width: 1em;
     }
 }

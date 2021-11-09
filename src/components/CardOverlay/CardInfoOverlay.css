@@ -4,7 +4,7 @@
     background-color: rgba(0, 0, 0, .8);
     opacity: 1;
     position: absolute;
-    border-radius: .2em;
+    border-radius: 2em;
 }
 .card-figure-container {
     opacity: .5;

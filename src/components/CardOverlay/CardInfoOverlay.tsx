@@ -10,7 +10,7 @@ const CardInfoOverlay = ({ object }: CardInfoOverlayProps ) => {
         <div className="gallery-overlay">
             <figure className="card-figure-container">
                 <div className="hamster-info-container">
-                    <p className="hamster-info"> age: {object.age} </p>
+                    <p className="hamster-info"> games: {object.games} </p>
                     <p className="hamster-info"> wins: {object.wins} </p>
                     <p className="hamster-info"> defeats: {object.defeats} </p>
                     <button className="btn"> close </button>

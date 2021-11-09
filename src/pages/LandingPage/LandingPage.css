@@ -1,25 +1,27 @@
-.container.landingpage-container {
+.container-landingpage {
     height: 100vh;
     width: 100%;
     margin: 0 auto;
-    background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 56%, rgba(237,237,237,1) 97%, rgba(228,228,228,1) 100%);
     padding: 2em;
-    
+    background-color: #1b0e0e;
 }
-.img-container {
-    box-shadow: rgba(185, 131, 31, 0.253) -5px 5px, rgba(206, 124, 17, 0.3) -10px 10px, rgba(196, 107, 6, 0.2) -15px 15px, rgba(226, 158, 81, 0.1) -20px 20px, rgba(212, 141, 8, 0.05) -25px 25px;
-    border-radius: .5em;
-    border: 1px solid rgba(185, 131, 31, 0.253);
+.landingPage-img-container {
+    width: 40em;
+    border-radius: 2em;
+    margin-top: 2em;
 }
-.img-container img {
+.landingPage-img-container img {
     width: 100%;
+    border-radius: 2em;
+    border: 1px solid var(--font-color);
 }
-.container h2 {
-    font-weight: 100;
+.landingPage-content {
+    color: white;
 }
 .cutest {
     color: var(--font-color);
     font-family: 'Quicksand';
     font-weight: 700;
+    font-size: 1.5em;
+    letter-spacing: .1em;
 }

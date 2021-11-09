@@ -18,6 +18,12 @@ const Card = ({ object }: CardProps) => {
         setShowCIOverlay(!showCIOverlay) 
     };
 
+    // handleDelete = (id) => {
+    //     if( object ) {
+    //         setData(object.filter(hamster => hamster.id !== id))
+    //     }
+    // }
+
     return (
         <>
             <figure
