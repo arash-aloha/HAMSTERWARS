@@ -73,8 +73,8 @@ Tävla
 
     return (
         <main className="tournament-container">
-            {noResponse && (<h4 className="error"> Could not reach the server... Please try again later. </h4>)}
-            {isLoading && (<h4 className="error"> Loading page... </h4>)}
+            {noResponse && (<h4 className="tournament-error"> Could not reach the server... Please try again later. </h4>)}
+            {isLoading && (<h4 className="tournament-error"> Loading page... </h4>)}
             {hamsters &&
                 (<aside className="para"> 
                     <p><span className="italic"> HAMSTER TOURNAMENT </span></p><br />

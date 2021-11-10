@@ -29,8 +29,8 @@ const GalleryPage = () => {
 
     return (
         <main className="gallerypage-container">
-            {noResponse && (<h4 className="error"> Could not reach the server... Please try again later. </h4>)}
-            {isLoading && (<h4 className="error"> Loading hamsters... </h4>)}
+            {noResponse && (<h4 className="gallerypage-error"> Could not reach the server... Please try again later. </h4>)}
+            {isLoading && (<h4 className="gallerypage-error"> Loading hamsters... </h4>)}
             { apiRequest && <GalleryContainer /> }
         </main>
     )

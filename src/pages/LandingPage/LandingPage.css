@@ -25,3 +25,12 @@
     font-size: 1.5em;
     letter-spacing: .1em;
 }
+.landingPage-error {
+    color: white;
+}
+.gallerypage-error {
+    margin: 2em;
+}
+.tournament-error {
+    margin: 2em;
+}

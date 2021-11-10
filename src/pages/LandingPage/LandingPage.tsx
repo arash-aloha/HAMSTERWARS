@@ -22,8 +22,8 @@ const LandingPage = () => {
     
     return (
         <section className="container-landingpage">
-            {noResponse && (<h4 className="error"> Could not reach the server... Please try again later. </h4>)}
-            {isLoading && (<h4 className="error"> Loading page... </h4>)}
+            {noResponse && (<h4 className="landingPage-error"> Could not reach the server... Please try again later. </h4>)}
+            {isLoading && (<h4 className="landingPage-error"> Loading page... </h4>)}
             {cutest?.map(hamster =>
             <div className="landingPage-content" key={hamster.id}>
                 <h2> Welcome to HAMSTER WARS! </h2>
