@@ -6,6 +6,7 @@ interface CardInfoOverlayProps {
 }
 
 const CardInfoOverlay = ({ object }: CardInfoOverlayProps ) => {
+
     return (
         <div className="gallery-overlay">
             <figure className="card-figure-container">
@@ -13,7 +14,6 @@ const CardInfoOverlay = ({ object }: CardInfoOverlayProps ) => {
                     <p className="hamster-info"> games: {object.games} </p>
                     <p className="hamster-info"> wins: {object.wins} </p>
                     <p className="hamster-info"> defeats: {object.defeats} </p>
-                    <button className="btn"> close </button>
                 </div>
             </figure>
         </div>

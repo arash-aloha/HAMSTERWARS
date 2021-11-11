@@ -34,7 +34,6 @@ async function requestCutest(
         const data = await response.json();
         console.log('Retrieved API response for /Cutest.', data);
         
-        console.log(data.wins);
         if( data && data.length > 1 ) {
             saveCutest([data[Math.floor(Math.random() * data.length)]])
         } else if (data && data.length === 1) {
@@ -53,7 +52,8 @@ async function requestCutest(
 
 async function requestTournament( 
     url:string, 
-    saveData:(data:any)=>void,
+    saveData1:(data:any)=>void,
+    saveData2:(data:any)=>void,
     loading:(parameter:boolean)=>void, 
     noResponse:(parameter:boolean)=>void) {
     try {
@@ -70,7 +70,8 @@ async function requestTournament(
             response2 = await fetch(url);
             data2 = await response1.json();
         }
-        saveData([data1, data2])
+        saveData1(data1)
+        saveData2(data2)
         loading(false);
     }
     catch(error) {

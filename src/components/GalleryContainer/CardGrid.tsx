@@ -20,7 +20,6 @@ const CardGrid = ({ filterHamsters }: CardGridProps) => {
             </section>
         </>
     )
-
 }
 
 export default CardGrid

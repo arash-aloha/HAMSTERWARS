@@ -13,5 +13,14 @@ const toggleState = atom<boolean>({
     key: "toggle",
     default: false
 });
+const clickedHamsterAtom = atom<HamsterObject | null>({
+    key: 'clickedHamster',
+    default: null
+});
+const addBtnAtom = atom<boolean>({
+    key: 'addBtnAtom',
+    default: false
+})
 
-export { hamstersState, matchState, toggleState }
+
+export { hamstersState, matchState, toggleState, clickedHamsterAtom, addBtnAtom }

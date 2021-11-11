@@ -1,0 +1,60 @@
+.hamstercard-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 10, 0.85);
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.hamsterCard {
+    color: var(--font-color);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30em;
+    height: 40em;
+    border: 1px solid;
+    border-radius: 2em;
+    background-color: rgba(0, 0, 10, 0.85);
+    padding: 1em;
+    position: relative;
+    box-shadow: 0px 0px 15px;
+}
+.hamsterCard header {
+    font-size: 2em;
+    position: absolute;
+    top: 1em;
+}
+.hamsterCard p {
+    font-size: 1.5em;
+    font-family: var(--font-Quick);
+}
+.hamsterCard figure img {
+    width: 100%; 
+    height: 80%; 
+    object-fit: cover;
+}
+.hamsterCard figure {
+    background-color: white;
+    border-radius: 2em;
+    height: 18em;
+    width: 13em;
+}
+.hamsterCard div {
+    display: flex;
+    flex-direction: column;
+}
+.bin-container {
+    cursor: pointer;
+    position: absolute;
+    bottom: 1em;
+}
+.bin-icon {
+    font-size: 2em;
+}

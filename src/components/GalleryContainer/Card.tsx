@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { HamsterObject } from "../../TS-models/models"
+import { useRecoilState } from "recoil";
+import { toggleState, clickedHamsterAtom } from "../../State/atoms";
 
 import CardInfoOverlay from "../CardOverlay/CardInfoOverlay";
 
@@ -12,22 +14,23 @@ interface CardProps {
 
 const Card = ({ object }: CardProps) => {
 
+    const [toggle, setToggle] = useRecoilState(toggleState)
+    const [, setClickedHamster] = useRecoilState(clickedHamsterAtom)
     //overlay
     const [showCIOverlay, setShowCIOverlay] = useState<boolean>(false);
     const toggleOverlay = () => {
         setShowCIOverlay(!showCIOverlay) 
     };
 
-    // handleDelete = (id) => {
-    //     if( object ) {
-    //         setData(object.filter(hamster => hamster.id !== id))
-    //     }
-    // }
+    const handleClick = () => {
+        setClickedHamster(object)
+        setToggle(!toggle)
+    }
 
     return (
         <>
             <figure
-                onClick={() => console.log('clicked on object id: ', object.id)}
+                onClick={() => handleClick()}
                 key={object.id} 
                 className="hamster-card"
                 onMouseEnter={toggleOverlay}
@@ -39,7 +42,6 @@ const Card = ({ object }: CardProps) => {
                     { showCIOverlay && <CardInfoOverlay object={object} /> }
                 </div>
             </figure>
-            
         </>
     )
 }
