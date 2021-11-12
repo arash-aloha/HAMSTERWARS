@@ -8,7 +8,7 @@ const LandingPage = () => {
   return (
     <main>
         <section className="container-landingpage">
-            <div>
+            <div className="headerslanding">
                 <h2> Welcome to HAMSTER WARS! </h2>
                 <h2>
                     {" "}

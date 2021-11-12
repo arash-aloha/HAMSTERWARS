@@ -6,10 +6,11 @@
     background-color: #1b0e0e;
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
-.container-container h2 {
-    font-size: 3em;
+.headerslanding {
+    font-size: 1.7em;
+    margin-top: 2em;
 }
 .cutest {
     color: var(--font-color);
@@ -20,7 +21,7 @@
 }
 .landingpage-figure {
     margin: 2em;
-    margin-top: 14em;
+    margin-top: 20em;
 }
 .landingpage-logo img {
     width: 22em;

@@ -22,8 +22,8 @@ const Rivals = ({ hamster1, hamster2, handlePUT }: RivalsProps) => {
                 <p>name: {hamster1.name}</p>
                 </figure>
             </article>)
-            : null
-        }
+        : null }
+
         {hamster2 
         ?
         (<article className="contestants" key={hamster2.id}
@@ -34,11 +34,10 @@ const Rivals = ({ hamster1, hamster2, handlePUT }: RivalsProps) => {
             ? <img src={`/img/${hamster2.imgName}`} alt={hamster2.name} />
             : <img src={hamster2.imgName} alt={hamster2.name} />
             }
-                <p>name: {hamster2.name}</p>
+                <p>name: {hamster2.name} </p>
             </figure>
         </article>)
-        : null}
-       
+        : null}     
         </>
     )
 }

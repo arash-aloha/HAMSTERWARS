@@ -14,7 +14,9 @@ const Tournaments = () => {
     const [loser, setLoser] = useState<null | HamsterObject>(null)
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [noResponse, setNoResponse] = useState<boolean>(false);
-    
+    const [winnerSlide, setWinnerSlide] = useState(false)
+    const [loserSlide, setLoserSlide] = useState(false)
+
     useEffect(() => {
         async function getFetch(url:string) {
             await requestTournament(url, setHamster1, setHamster2, setIsLoading, setNoResponse);
@@ -53,9 +55,12 @@ const Tournaments = () => {
         const dataLoser = await responseLoser.json();
         setWinner(dataWinner)
         setLoser(dataLoser)
+        setWinnerSlide(true)
+        setLoserSlide(true)
     }
     
-
+    const winnerClass = winner && winnerSlide ? 'stats-winner' : '';
+    const loserClass = loser && loserSlide ? 'stats-loser' : '';
 
     return (
         <main className="tournament-container">
@@ -72,18 +77,18 @@ const Tournaments = () => {
                 onClick={() => window.location.reload()} >
                 <GiCrossedSwords />
             </span> 
+                <p className="tournament-icon-p" onClick={() => window.location.reload()}> new game </p>
             {   hamster1 
                 && hamster2 
                 && <Rivals hamster1={hamster1} 
                             hamster2={hamster2} 
                             handlePUT={handlePUT} 
-                            // winner={winner}
-                            // loser={loser}
+
                     /> 
             }
 
-                {winner 
-                ?   <aside className="stats-winner"> 
+                {winner && winnerSlide
+                ?   <aside className={winnerClass}> 
                             <p>The winner is: {winner.name}</p>
                             <p> Stats: </p>
                             <p> Games: {winner.games} </p>
@@ -93,8 +98,8 @@ const Tournaments = () => {
                             <p> Favourite food: {winner.favFood} </p>
                     </aside>
                 : null}       
-                {loser 
-                ?   <aside className="stats-loser"> 
+                {loser && loserSlide
+                ?   <aside className={loserClass}> 
                             <p>The loser is: {loser.name}</p>
                             <p> Stats: </p>
                             <p> Games: {loser.games} </p>

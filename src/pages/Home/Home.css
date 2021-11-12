@@ -2,6 +2,9 @@
     margin: 2em;
     display: flex;
 }
+.homepage-wrapper {
+    margin: 0 auto;
+}
 .homepage-content {
     margin: 2em;
     display: flex;

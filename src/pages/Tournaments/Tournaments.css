@@ -16,6 +16,11 @@
     position: absolute;
     top: 40%;
 }
+.tournament-icon-p {
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+}
 .contestants {
     height: 22em;
     width: 22em;
