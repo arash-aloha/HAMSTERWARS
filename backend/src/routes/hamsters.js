@@ -111,18 +111,19 @@ const getAllHamsters = async () => {
 const hamsterStats = async (req, res) => {
     let allHamsters = await getAllHamsters()
 
-    const winners = []
-    allHamsters.forEach(hamster => {
-        winners.push({ ...hamster.data(), id: hamster.id });
+    const winners = [...allHamsters];
+    
+    winners.sort((a,b) => {
+        let aDiff = a.wins - a.defeats
+        let bDiff = b.wins - b.defeats
+        return bDiff - aDiff
     })
-    const sortedHamsters = winners.sort(function (a, b) {
-        return b.wins - a.wins
-    })
-    const cutestHamster = [];
-    for (let i = 0; i < 1; i++) {
-        cutestHamster.push(sortedHamsters[i])
-    }
-    return cutestHamster;
+    
+    let maxScore = allHamsters[0].wins-allHamsters[0].defeats
+    
+    let allWinners = allHamsters.filter(x => x.wins-x.defeats === maxScore)
+
+    return allWinners
 }
 
 //SCRIPT GET ONE

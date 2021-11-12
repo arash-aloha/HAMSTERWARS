@@ -27,7 +27,6 @@ const Home = () => {
                 (<h4 className="error-landingpage"> Could not reach the server... Please try again later. </h4>)}
             {isLoading && 
                 (<h4 className="error-landingpage"> Loading page... </h4>)}
-            
             {cutest?.map(hamster =>
             <div className="homepage-content" key={hamster.id}>
                 <div>
@@ -38,9 +37,9 @@ const Home = () => {
                         <figure className="homepage-img-container">
                         <FaCrown className="homepageicon"/>
                         <p className="homepageiconname"><span className="cutest">{hamster.name}</span></p>
-                        {hamster.imgName.startsWith('hamster') 
-                        ? <img src={`/img/${hamster.imgName}`} alt={hamster.name} />
-                        : <img src={hamster.imgName} alt={hamster.name} />
+                        {hamster?.imgName.startsWith('hamster') 
+                        ? <img src={`/img/${hamster?.imgName}`} alt={hamster.name} />
+                        : <img src={hamster?.imgName} alt={hamster.name} />
                         }
                         </figure>
                     </Link>

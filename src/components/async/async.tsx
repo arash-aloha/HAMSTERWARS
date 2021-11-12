@@ -28,13 +28,13 @@ async function requestCutest(
             throw Error('Could not fetch data for that resource.');
         }
         const data = await response.json();
-    
+        
         if( data && data.length > 1 ){
-            saveCutest([data[Math.floor(Math.random() * data.length)]])
-        } else if ( data && data.length === 1 ) {
             saveCutest([data[0]])
+        } else if ( data && data.length === 1 ) {
+            saveCutest([data[Math.floor(Math.random() * data.length)]])
         }
-        saveCutest(data)
+        // saveCutest(data[0])
         loading(false);
     }
     catch(error) {
