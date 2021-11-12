@@ -104,3 +104,6 @@
 @keyframes slide-right {
     100% { right: 0; }
 }
+.tournament-icon {
+    cursor: pointer;
+}

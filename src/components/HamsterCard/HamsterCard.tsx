@@ -23,7 +23,10 @@ const HamsterCard = ( ) => {
             <section>
                 <figure>
                     <p>name: {clickedHamster?.name}</p>
-                    <img src={`/img/${clickedHamster?.imgName} `} alt={clickedHamster?.name}  />
+                    {clickedHamster?.imgName.startsWith('hamster') 
+                    ? <img src={`/img/${clickedHamster?.imgName}`} alt={clickedHamster?.name} />
+                    : <img src={clickedHamster?.imgName} alt={clickedHamster?.name} />
+                    }
                 </figure>
             </section>
                 <div>

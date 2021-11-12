@@ -1,5 +1,5 @@
 function isValidImg(imgName: string): boolean {
-    if (imgName.length <= 7 
+    if (  imgName.length <= 7 
       || !imgName.endsWith('.jpg')
       || !imgName.endsWith('.png')
       || !imgName.endsWith('.svg')

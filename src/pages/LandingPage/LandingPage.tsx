@@ -30,8 +30,12 @@ const LandingPage = () => {
                   <h2> If you LOVE <span className="cutest">cute</span> hamsters, this is the place to be. </h2>
                 <h3> May the <span className="cutest">cutest</span> hamster win. Let the games begin </h3>
                 <Link to="/home">
+                    <p>{hamster.name}</p>
                     <figure className="landingPage-img-container">
-                        <img src={`/img/${hamster.imgName}`} alt="cutest hamster" />
+                    {hamster.imgName.startsWith('hamster') 
+                    ? <img src={`/img/${hamster.imgName}`} alt={hamster.name} />
+                    : <img src={hamster.imgName} alt={hamster.name} />
+                    }
                     </figure>
                 </Link>
             </div>)

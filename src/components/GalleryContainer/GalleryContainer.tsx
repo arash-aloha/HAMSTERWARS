@@ -9,10 +9,9 @@ import CardGrid from './CardGrid'
 import HamsterCard from '../HamsterCard/HamsterCard'
 import AddPage from '../Add/AddPage'
 
-// 2. Formuläret ska använda validering. Man ska lägga till och ta bort hamster från galleriet. 
 
 const GalleryContainer = () => {
-    //recoil state
+    
     const hamstersArray = useRecoilValue<null | HamsterObject[]>(hamstersState);
     const toggle = useRecoilValue(toggleState)
     const toggleAdd = useRecoilValue(addBtnAtom)

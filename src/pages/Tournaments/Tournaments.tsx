@@ -68,7 +68,10 @@ const Tournaments = () => {
                 </aside>) 
             }
             <div className="rival-container">
-            <span className="tournament-icon"><GiCrossedSwords /></span> 
+            <span className="tournament-icon" 
+                onClick={() => window.location.reload()} >
+                <GiCrossedSwords />
+            </span> 
             {   hamster1 
                 && hamster2 
                 && <Rivals hamster1={hamster1} 

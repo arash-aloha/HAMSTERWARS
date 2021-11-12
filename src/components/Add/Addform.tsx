@@ -8,9 +8,9 @@ const Addform = () => {
     const [loves, setLoves] = useState('');
     const [favFood, setFavFood] = useState('');
     const [img, setImg] = useState('');
-    const [games, setGames] = useState<number>(0);
-    const [wins, setWins] = useState<number>(0);
-    const [defeats, setDefeats] = useState<number>(0);
+    const [games,] = useState<number>(0);
+    const [wins, ] = useState<number>(0);
+    const [defeats,] = useState<number>(0);
   
     const [nameIsTouched, setNameIsTouched] = useState<boolean>(false);
     const [ageIsTouched, setAgeIsTouched] = useState<boolean>(false);
@@ -91,7 +91,7 @@ const Addform = () => {
                 onChange={e => setFavFood(e.target.value)}
                 onClick={() => setFavFoodIsTouched(true)}
         />
-        <input type="file"
+        <input type="text"
                 placeholder="upload hamster image..."
                 onChange={e => setImg(e.target.value)}
                 onClick={() => setImgNameIsTouched(true)}

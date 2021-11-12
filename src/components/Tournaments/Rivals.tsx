@@ -15,10 +15,11 @@ const Rivals = ({ hamster1, hamster2, handlePUT }: RivalsProps) => {
                     onClick={() => {handlePUT(hamster1, hamster2)}} 
             >
                 <figure className="contestants-img-container">
-                    <img src={`/img/${hamster1.imgName}`} 
-                        alt="contestants" 
-                    />
-                        <p>name: {hamster1.name}</p>
+                {hamster1.imgName.startsWith('hamster') 
+                ? <img src={`/img/${hamster1.imgName}`} alt={hamster1.name} />
+                : <img src={hamster1.imgName} alt={hamster1.name} />
+                }
+                <p>name: {hamster1.name}</p>
                 </figure>
             </article>)
             : null
@@ -29,15 +30,15 @@ const Rivals = ({ hamster1, hamster2, handlePUT }: RivalsProps) => {
         onClick={() => {handlePUT(hamster2, hamster1)}} 
         >
             <figure className="contestants-img-container">
-                <img src={`/img/${hamster2.imgName}`} 
-                    alt="contestants" 
-                />
+            {hamster2.imgName.startsWith('hamster') 
+            ? <img src={`/img/${hamster2.imgName}`} alt={hamster2.name} />
+            : <img src={hamster2.imgName} alt={hamster2.name} />
+            }
                 <p>name: {hamster2.name}</p>
             </figure>
         </article>)
         : null}
        
-       {/* <button onClick={() => window.location.reload()}> R E F R E S H </button> */}
         </>
     )
 }
