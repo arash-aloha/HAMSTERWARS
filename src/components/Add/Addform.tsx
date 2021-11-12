@@ -1,3 +1,5 @@
+import { useRecoilState } from "recoil"
+import { addBtnAtom } from "../../State/atoms"
 import { useState } from "react";
 
 import { isValidImg, isValidString, isValidLoves, isValidFavFood, isValidAge } from "./validation";
@@ -25,6 +27,7 @@ const Addform = () => {
     const favFoodIsValid = isValidFavFood(favFood);
     const imgIsValid = isValidImg(img);
     
+    const [toggle,setToggle] = useRecoilState<boolean>(addBtnAtom);
     
     const ageClass = ageIsValid && ageIsTouched ? 'valid' : ageIsTouched ? 'invalid' : '';
     const nameClass = nameIsValid && nameIsTouched ? 'valid' : nameIsTouched ? 'invalid' : '';
@@ -54,6 +57,7 @@ const Addform = () => {
                 {method: 'GET', headers: { 'Content-Type' : 'application/json'}})
         const hamsterData = await response.json() 
         console.log (hamsterData)
+        setToggle(!toggle)
       };
 
 
@@ -97,7 +101,8 @@ const Addform = () => {
                 onClick={() => setImgNameIsTouched(true)}
                 className={imgClass}
         /> 
-        <button className="add-btn" disabled={!formIsValid} onClick={hamsterUploadHandler}> add new hamster </button>
+        <button type="button" className="add-btn" disabled={!formIsValid} onClick={hamsterUploadHandler}> add new hamster </button>
+        <button className="regret-btn" onClick={()=>setToggle(!toggle)}> back </button>
       </form>
     </>
   );

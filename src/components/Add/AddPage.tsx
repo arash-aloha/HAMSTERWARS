@@ -13,7 +13,6 @@ const AddPage = ( ) => {
         <section className="addpage-overlay">
             addpage-overlay
             <Addform />
-            <button onClick={()=>setToggle(!toggle)}> regret </button>
         </section>
     )
 }

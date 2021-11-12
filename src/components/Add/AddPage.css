@@ -23,6 +23,7 @@
     flex-direction: column;
     padding: 4em;
     z-index: 99;
+    position: relative;
 }
 .form-container input {
     padding: .5em;
@@ -43,4 +44,10 @@
 }
 .invalid {
     border: 3px solid crimson;
+}
+.regret-btn {
+    position: absolute;
+    top: 25px;
+    right: 2em;
+    cursor: pointer;
 }

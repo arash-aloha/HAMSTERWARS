@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { requestTournament } from "../../components/async/async"
 import { HamsterObject } from "../../TS-models/models"
 
+
 import './Tournaments.css'
 import { GiCrossedSwords } from 'react-icons/gi'
 import Rivals from "../../components/Tournaments/Rivals"
@@ -25,6 +26,7 @@ const Tournaments = () => {
         console.log('Send API request /Random.');
     }, []);
     
+   
     async function handlePUT(winner:HamsterObject, loser:HamsterObject) {     
         await fetch(`/hamsters/${winner.id}`,{
             method: 'PUT',
@@ -46,6 +48,25 @@ const Tournaments = () => {
                 })
             });
         BattleResults(winner, loser)
+    }
+
+    async function newGame() {
+        const url = '/hamsters/random'
+        const response1 = await fetch(url);
+        let response2 = await fetch(url);
+
+        if (!response1.ok || !response2.ok) {
+            throw Error('Could not fetch data for that resource.');
+        }
+        const data1 = await response1.json();
+        let data2 = await response2.json();
+
+        if ( data1.id === data2.id ) {
+            response2 = await fetch(url);
+            data2 = await response1.json();
+        }
+        setHamster1(data1)
+        setHamster2(data2)
     }
 
     async function BattleResults(winner:HamsterObject, loser:HamsterObject) {
@@ -74,10 +95,10 @@ const Tournaments = () => {
             }
             <div className="rival-container">
             <span className="tournament-icon" 
-                onClick={() => window.location.reload()} >
+                onClick={ newGame } >
                 <GiCrossedSwords />
             </span> 
-                <p className="tournament-icon-p" onClick={() => window.location.reload()}> new game </p>
+                <p className="tournament-icon-p" onClick={ newGame }> new game </p>
             {   hamster1 
                 && hamster2 
                 && <Rivals hamster1={hamster1} 
