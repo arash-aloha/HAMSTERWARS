@@ -4,19 +4,12 @@
     margin: 0 auto;
     padding: 2em;
     background-color: #1b0e0e;
-}
-.landingPage-img-container {
-    width: 40em;
-    border-radius: 2em;
-    margin-top: 2em;
-}
-.landingPage-img-container img {
-    width: 100%;
-    border-radius: 2em;
-    border: 1px solid var(--font-color);
-}
-.landingPage-content {
     color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.container-container h2 {
+    font-size: 3em;
 }
 .cutest {
     color: var(--font-color);
@@ -25,8 +18,17 @@
     font-size: 1.5em;
     letter-spacing: .1em;
 }
-.error-landingpage {
-    color: white;
+.landingpage-figure {
+    margin: 2em;
+    margin-top: 14em;
+}
+.landingpage-logo img {
+    width: 22em;
+    transition: all 500ms;
+}
+.landingpage-logo img:hover {
+    border-bottom: 5px solid var(--font-color);
+    transform: rotate(1080deg);
 }
 .gallerypage-error {
     margin: 2em;

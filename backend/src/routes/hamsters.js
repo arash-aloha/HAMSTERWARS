@@ -108,24 +108,21 @@ const getAllHamsters = async () => {
 }
 
 //SCRIPT GET CUTEST / WINNER / LOOSER
-const hamsterStats = async () => {
+const hamsterStats = async (req, res) => {
     let allHamsters = await getAllHamsters()
-    let cutestHamster = [];
-    let winners = [];
 
+    const winners = []
     allHamsters.forEach(hamster => {
-        if (hamster.games > 0 && hamster.wins > 0) {
-            winners.push(hamster)
-        }
+        winners.push({ ...hamster.data(), id: hamster.id });
     })
-
-    winners.forEach(hamster => {
-        procent = hamster.wins / hamster.games * 100
-        hamster.procent = procent;
-        cutestHamster.push(hamster);
-
+    const sortedHamsters = winners.sort(function (a, b) {
+        return b.wins - a.wins
     })
-    return cutestHamster
+    const cutestHamster = [];
+    for (let i = 0; i < 1; i++) {
+        cutestHamster.push(sortedHamsters[i])
+    }
+    return cutestHamster;
 }
 
 //SCRIPT GET ONE

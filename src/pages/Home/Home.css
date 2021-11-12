@@ -1,0 +1,65 @@
+.homepage-container {
+    margin: 2em;
+    display: flex;
+}
+.homepage-content {
+    margin: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+.homepage-img-container {
+    border-radius: 2em;
+    max-width: 50em;
+    position: relative;
+}
+.homepage-img-container img {
+    border-radius: 2em;
+    max-width: 100%;
+    object-fit: cover;
+}
+.headline {
+    font-family: var(--font-Quick);
+    color: black;
+    margin-bottom: 1em;
+    margin-left: .2em;
+}
+.homepageicon {
+    font-size: 3em;
+    transform: rotate3d(1, 1, 1, 325deg);
+    position: absolute;
+    top: 0;
+    left: .1em;
+}
+.homepageiconname {
+    position: absolute;
+    top: 2.5em;
+    padding: .2em;
+}
+.game-info {
+    margin-top: auto;
+    margin-left: 1em;
+}
+.game-info p, h5 {
+    font-family: var(--font-Quick);
+}
+
+
+@media only screen and (max-width: 570px) {
+    .homepage-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .homepage-container {
+        margin: 0;
+    }
+    .homepage-content {
+        margin: 1em;
+    }
+    .homepage-img-container {
+        margin-top: 1em;
+    }
+    .homepage-img-container img {
+        border-radius: 1em;
+    }
+
+}

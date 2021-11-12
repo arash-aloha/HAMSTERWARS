@@ -1,4 +1,5 @@
 export interface HamsterObject {
+    [x: string]: any;
     name: string;
     age: number;
     favFood: string;
